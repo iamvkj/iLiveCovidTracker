@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const Statewise = () => {
 
     const [data, setData] = useState([]);
-    
+
     const getCovidData = async () => {
         const res = await fetch('https://data.covid19india.org/data.json');
         const actualData = await res.json();
@@ -29,7 +29,7 @@ const Statewise = () => {
                                 <th> Recovered </th>
                                 <th> Deaths </th>
                                 <th> Active </th>
-                                <th> Updated </th>
+                                {/* <th> Updated </th> */}
                             </tr>
                         </thead>
                         <tbody>
@@ -42,7 +42,7 @@ const Statewise = () => {
                                             <td> {currentElement.recovered} </td>
                                             <td> {currentElement.deaths} </td>
                                             <td> {currentElement.active} </td>
-                                            <td> {currentElement.lastupdatedtime} </td>
+                                            {/* <td> {currentElement.lastupdatedtime} </td> */}
                                         </tr>
                                     )
                                 })
